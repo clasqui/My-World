@@ -1,6 +1,6 @@
 <?php
 //Inicialització de la base de dades
-mysql_connect("localhost","root","marc112009");
+mysql_connect("localhost","","");
 mysql_select_db("webapp");
 
 /*
