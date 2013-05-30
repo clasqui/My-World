@@ -1,7 +1,7 @@
 <?php
 //Inicialització de la base de dades
 mysql_connect("localhost","","");
-mysql_select_db("webapp");
+mysql_select_db("myworld");
 
 /*
 function get_user_data($username){

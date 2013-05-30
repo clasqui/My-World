@@ -2,7 +2,7 @@
 
 //Inicialització de la base de dades
 mysql_connect("localhost","root","marc112009") or die("Could not connect to the MySQL Server");
-mysql_select_db("webapp") or die("Could not connect to the DB webapp");
+mysql_select_db("myworld") or die("Could not connect to the DB myworld");
 session_start();
 if (isset($_SESSION["data"])) {
     $isLogged = true;

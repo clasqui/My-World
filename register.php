@@ -1,7 +1,7 @@
 <?php
 //Conexió
 mysql_connect("localhost","root","marc112009");
-mysql_select_db("webapp");
+mysql_select_db("myworld");
 
 //Traspas de variables
 $username = $_POST["user"];
