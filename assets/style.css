@@ -1,0 +1,116 @@
+/* Basic StyleSheet */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+
+#header {
+    width: 100%;
+    height:auto;
+    background-color: #0CE83F;
+    -webkit-box-shadow: 2px 2px 2px;
+    position: fixed;
+    margin: 0;
+    padding-top:0;
+    padding-bottom: 0;
+    z-index: 2;
+}
+
+#logo {
+    width:auto;
+    height: 100%;
+    margin: 0 auto 0 20px;
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#logo a {
+    text-decoration: none;
+    color: black;
+}
+
+#nom {
+    width: auto;
+    height: 100%;
+    margin: 0 20px 0 auto;
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#main {
+    padding-top: 65px;
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+#nom:hover {
+    background-color: #00FF84;
+}
+
+#login-cont {
+    width: 140px;;
+    height: auto;
+    -webkit-border-radius: 20px;
+    background-color: #0DEBFF;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 70px;
+}
+
+#login {
+    
+}
+
+#register-cont {
+    width: 140px;
+    height: auto;
+    -webkit-border-radius: 20px;
+    background-color: #00FF84;
+    margin: auto;
+    margin-top: 130px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 70px;
+}
+
+#register {
+    
+}
+
+.file {
+    text-decoration: none;
+    color: black;
+}
+
+.file:after {
+    content: "      " url("d.png");
+}
+
+.unlink {
+    text-decoration: none;
+    color: black;
+}
+
+.profile_img {
+    width: 100px;
+    height: 100px;
+    border: solid 1px #000;
+    float: left;
+}
+
+.post, .datapost {
+    position: relative;
+    left: 50px;
+}
+
+.post {
+    width: 550px;
+}

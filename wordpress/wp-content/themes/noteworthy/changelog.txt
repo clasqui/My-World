@@ -1,0 +1,13 @@
+Noteworthy
+
+**************************************
+Version 1.2.1
+**************************************
+
+- fixed thumbnail alignment on posts grid display
+
+**************************************
+Version 1.2
+**************************************
+
+- added css media queries for smaller screen devices
