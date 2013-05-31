@@ -31,13 +31,13 @@ if ( $isLogged == false ){ header("location: index.php"); }
             
             ?>
         <p>
-            Nom d'usuari: <?= $_SESSION["data"]["username"]; ?>
+            Nom d'usuari: <?php echo $_SESSION["data"]["username"]; ?>
         </p>
         <p>
-            Correu electrònic: <span id="prof-email"><?= $_SESSION["data"]["email"]; ?> <button value="Canvia" id="ch-email" onclick="modify('prof-email','<?= $_SESSION["data"]["email"]; ?>', 'email'); ">Canvia</button></span>
+            Correu electrònic: <span id="prof-email"><?php echo $_SESSION["data"]["email"]; ?> <button value="Canvia" id="ch-email" onclick="modify('prof-email','<?php echo$_SESSION["data"]["email"]; ?>', 'email');">Canvia</button></span>
         </p>
         <p>
-            Contrassenya: <span id="prof-password"><?= $_SESSION["data"]["password"]; ?> <button value="Canvia" id="ch-pass" onclick="modify('prof-password','<?= $_SESSION["data"]["password"]; ?>', 'password'); ">Canvia</button></span>
+            Contrassenya: <span id="prof-password"><?php echo $_SESSION["data"]["password"]; ?> <button value="Canvia" id="ch-pass" onclick="modify('prof-password','<?php echo $_SESSION["data"]["password"]; ?>', 'password');">Canvia</button></span>
         </p>
         <p>
             <?php
@@ -60,7 +60,7 @@ if ( $isLogged == false ){ header("location: index.php"); }
             ?>
         </p>
         
-        <p>Arxius Pujats: <?= howmany_files($_SESSION["data"]["username"]) ?></p>
+        <p>Arxius Pujats: <?php echo howmany_files($_SESSION["data"]["username"]) ?></p>
         
         <div id="upload_img">
             <?php echo show_profile_img($_SESSION["data"]["username"]); ?>&nbsp;
