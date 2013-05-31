@@ -48,7 +48,7 @@ include("assets/auth.php");
             if ($archivo == "." or $archivo == ".."){
                 continue;
             }else{ ?>
-            <a class="file" title="Descarrega l'arxiu" href="files/<?= $_SESSION["data"]["username"] . "/" . $archivo; ?>"><?= $archivo; ?></a>&nbsp;&nbsp;&nbsp;<img src="assets/delete.png" title="Elimina l'arxiu" onclick="$.post('assets/delfile.php', {file: '<?= $archivo; ?>'}, function(responseTxt){ alert(responseTxt);window.location='index.php';} )" /><br>
+            <a class="file" title="Descarrega l'arxiu" href="files/<?php echo $_SESSION["data"]["username"] . "/" . $archivo; ?>"><?php echo $archivo; ?></a>&nbsp;&nbsp;&nbsp;<img src="assets/delete.png" title="Elimina l'arxiu" onclick="$.post('assets/delfile.php', {file: '<?php echo $archivo; ?>'}, function(responseTxt){ alert(responseTxt);window.location='index.php';} )" /><br>
          <?php   }
         closedir($directorio);
         ?>
