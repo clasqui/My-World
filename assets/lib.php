@@ -55,6 +55,6 @@ function howmany_files($user)  {
 }
 
 function show_profile_img($user){
-    return "<img class='profile_img' src='/profile_images/" . $user . ".jpg' />";
+    return "<img class='profile_img' src='/myworld/profile_images/" . $user . ".jpg' />";
 }
 ?>
