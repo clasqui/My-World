@@ -3,10 +3,10 @@ $public_profile = get_public_data($_GET["public"]);
 $public_username = $public_profile["username"];
 ?>
 <?php echo show_profile_img($public_username); ?><h1><?php echo "Perfil de " . $public_profile['name']; ?></h1><br>
-<p><?= $public_profile["bio"]; ?></p>
-<p>Nom d'usuari: <?= $public_profile["username"]; ?></p>
-<p>Correu electrònic: <?= $public_profile["email"]; ?></p>
-<p>Arxius Pujats: <?= howmany_files($public_profile["username"]) ?></p>
+<p><?php echo $public_profile["bio"]; ?></p>
+<p>Nom d'usuari: <?php echo $public_profile["username"]; ?></p>
+<p>Correu electrònic: <?php echo $public_profile["email"]; ?></p>
+<p>Arxius Pujats: <?php echo howmany_files($public_profile["username"]) ?></p>
 <div id="posts">
         <h2>Últimes publicacions</h2>
         <?php
