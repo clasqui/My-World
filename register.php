@@ -24,19 +24,23 @@ if(mysql_affected_rows() > 0){
 }
 mysql_free_result($resultat2);
 
+//Creació security_token
+$st = uniqid(md5($user), FALSE);  // Unique ID amb prefix md5 del nom d'usuari.
 
 //Inserim les dades a la base de dades
-mysql_query("INSERT INTO usuaris (username, password, name, email) VALUES ('$username', '$password', '$name', '$email')") or die("No s'han pogut inserir les dades a la base de dades.");
+mysql_query("INSERT INTO usuaris (username, password, name, email, security_token) VALUES ('$username', '$password', '$name', '$email', '$st')") or die("No s'han pogut inserir les dades a la base de dades.");
 
 //enviem correu electrònic
 $missatge = "
-Hola $name, i benvingut a MY WORLD! <br>
-Acabes de registrar-te correctament a MY WORLD amb les següents dades:<br>
-Nom d'usuari: $username<br>
-Nom complet: $name<br>
-Contrassenya: $password<br>
-Correu electrònic: $email<br>
-Ara ja pots anar a la pàgina de login de MY WORLD i entrar!";
+Hola $name, i benvingut a MY WORLD!
+Acabes de registrar-te correctament a MY WORLD amb les següents dades:
+Nom d'usuari: $username
+Nom complet: $name
+Contrassenya: $password
+Correu electrònic: $email
+Ara només falta que segueixis aquest enllaç per activar el teu compte:
+127.0.0.1/myworld/confirmar.php?token=$st
+";
 
 $titol = "Benvingut a MY WORLD";
 
@@ -54,8 +58,7 @@ if(!mkdir("files/" . $username)) {
         <link type="text/css" href="assets/style.css" />
     </head>
     <body>
-        T'has registrat correctament!  
-        T'hem enviat un correu amb les teves dades perquè no te n'oblidis.<br>
-        Ara ja pots iniciar sessió desde <a href="index.php">la pàgina de login</a>.
+        T'has registrat correctament!<br>
+        Them enviat un crreu amb les dades i amb el link per activar el compte.  <br>Fins que no l'hagis activat no podràs iniciar sessió.
     </body>
 </html>
