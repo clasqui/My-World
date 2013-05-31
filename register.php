@@ -25,7 +25,7 @@ if(mysql_affected_rows() > 0){
 mysql_free_result($resultat2);
 
 //Creació security_token
-$st = uniqid(md5($user), FALSE);  // Unique ID amb prefix md5 del nom d'usuari.
+$st = uniqid(md5($username), FALSE);  // Unique ID amb prefix md5 del nom d'usuari.
 
 //Inserim les dades a la base de dades
 mysql_query("INSERT INTO usuaris (username, password, name, email, security_token) VALUES ('$username', '$password', '$name', '$email', '$st')") or die("No s'han pogut inserir les dades a la base de dades.");
